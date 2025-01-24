@@ -25,6 +25,7 @@ class ChatApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat App',
       theme: ThemeData(primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: false,
       home: const LoginPage(),
     );
   }

@@ -46,6 +46,11 @@ class _ChatPageState extends State<ChatPage> {
               itemCount: chatProvider.messages.length,
               itemBuilder: (context, index) {
                 final message = chatProvider.messages[index];
+
+                if (message == null) {
+                  return SizedBox.shrink();
+                }
+
                 final isCurrentUser = message.userId == widget.accessToken;
 
                 return Row(

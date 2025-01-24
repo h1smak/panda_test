@@ -8,11 +8,11 @@ class ChatProvider with ChangeNotifier {
     chatDataSource: ChatRemoteDataSource(),
   );
 
-  final List<Message> _messages = [];
-  late Stream<Message> _messageStream;
+  final List<Message?> _messages = [];
+  late Stream<Message?> _messageStream;
   bool _isConnected = false;
 
-  List<Message> get messages => _messages;
+  List<Message?> get messages => _messages;
   bool get isConnected => _isConnected;
 
   void connect(String accessToken) {

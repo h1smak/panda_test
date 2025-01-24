@@ -8,7 +8,7 @@ class ChatRepositoryImpl implements ChatRepository {
   ChatRepositoryImpl({required this.chatDataSource});
 
   @override
-  Stream<Message> connect(String accessToken) {
+  Stream<Message?> connect(String accessToken) {
     return chatDataSource.connect(accessToken).map((event) {
       if (event['type'] == 'new_message') {
         final message = event['message'];
@@ -18,7 +18,7 @@ class ChatRepositoryImpl implements ChatRepository {
           text: message['text'],
         );
       }
-      throw Exception('Unknown event type');
+      return null;
     });
   }
 
