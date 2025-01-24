@@ -1,16 +1,63 @@
-# panda_test
+# Chat App
 
-A new Flutter project.
+A Flutter-based chat application with Clean Architecture principles. This project demonstrates user authentication via REST API and real-time messaging using WebSocket.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a modular and scalable chat application in Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+### Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   ```bash
+   git clone <repository_url>
+   cd <repository_folder>
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+3. Run the application:
+
+   ```bash
+   flutter run
+   ```
+
+## Backend Server
+
+The backend server is built using Node.js with the following features:
+
+- **Authentication**: Provides a REST endpoint for user authentication.
+- **WebSocket Communication**: Handles real-time chat messages.
+- **Auto-Replies**: Simulates a chatbot ("fishGPT") that responds with random messages after a delay.
+
+### Running the Server
+
+1. Install Node.js and npm if not already installed.
+
+2. Navigate to the server folder and install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the server:
+
+   ```bash
+   node server.js
+   ```
+
+4. The server will run on `http://localhost:3000` by default.
+
+## Features
+
+- **User Authentication**: Log in with a username authenticated via REST API.
+- **Real-time Messaging**: Send and receive messages instantly using WebSocket.
+- **Clean Architecture**: Organized codebase ensuring modularity and scalability.
+- **State Management**: Leveraging `ChangeNotifier` and `Provider` for efficient UI updates.
+
+
